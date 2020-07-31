@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= title %></title>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo" style="margin-left: 5%;"><img style="position: absolute;top:5px;left:5px"src="../images/animat-compass-color.gif" alt="" height="120px" width="120px"></a>
+      <ul class="right hide-on-med-and-down" style="margin-right: 45%;">
+        <li><a href="/"><i class="material-icons menu-icon">home</i></a></li>
+        <li><a href="/users"><i class="material-icons menu-icon">explore</i></a></li>
+
+      </ul>
+    </div>
+  </nav>
+
+  <section class="users">
+    <h1 class="text-white font-weight-bold">DETAILS</h1>
+    <div class="scrollit">
+        
+        <table class="container text-center" >
+            <thead>
+                <tr style="color: white;">
+                    <th><h1>Name</h1></th>
+                    <th><h1>Address</h1></th>
+                    <th><h1>Ph. Number</h1></th>
+                    <th><h1>Email</h1></th>
+                </tr>
+            </thead>
+
+            <tbody>
+              <% if(records.length>0){
+                records.forEach((row)=>{
+                  %>
+                <tr>
+                    <td><%=row.name%></td>
+                    <td><%=row.address%></td>
+                    <td><%=row.number%></td>
+                    <td><%=row.email%></td>
+                </tr>
+             <% }) } %>
+            </tbody>
+
+        </table>
+      </div>
+
+  </section>
+  <footer style="height: 50px; background-color: #e20c0c8c;margin-top: -50px;min-height: 10%;">
+  
+    <p style="text-align: center; color: white; font-size: large;">© 2020 Created and Copyrighted by <a href="https://itarungm.blogspot.com/" class="copyright" style="color: chartreuse;">iTarunGM</a></p>
+    
+</footer>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>

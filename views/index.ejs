@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title><%= title %></title>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  
+</head>
+
+<body style="background-image: url('../images/bg0.jpg');
+             background-position: center center;
+             background-size: cover;
+             height: 90vh;
+             background-color: rgba(229, 231, 99, 0.4);
+             background-blend-mode: overlay;">
+  <nav>
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo" style="margin-left: 5%;"><img style="position: absolute;top:5px;left:5px"src="../images/animat-compass-color.gif" alt="" height="120px" width="120px"></a>
+      <ul class="right hide-on-med-and-down" style="margin-right: 45%;">
+        <li><a href="/"><i class="material-icons menu-icon">home</i></a></li>
+        <li><a href="/users"><i class="material-icons menu-icon">explore</i></a></li>
+
+      </ul>
+    </div>
+  </nav>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <% if(msg.length>0){ %>
+          <div class="alert alert-primary text-center" role="alert">
+              <strong><%= msg %></strong>
+          </div>
+            <% } %>
+          <div class="card card-signin my-5">
+            <div class="card-b">
+              <h5 class="card-title text-center">Provide Your Details</h5>
+              <form class="form-signin" action="/" method="POST">
+                <div class="form-label-group">
+                  <input type="text" name="name" id="inputEmail" class="form-control" placeholder="Full Name" required autofocus>
+                  <label for="inputEmail">Name</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                  <label for="inputEmail">Email address</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input type="text" name="address" id="inputEmail" class="form-control" placeholder="Phone Number" required autofocus>
+                  <label for="inputEmail">Address</label>
+                </div>
+
+                <div class="form-label-group">
+                  <input type="text" name="phone" id="inputEmail" class="form-control" placeholder="Address" required autofocus>
+                  <label for="inputEmail">Phone Number</label>
+                </div>
+  
+            
+  
+                    <button class="btn text-center">SUBMIT</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<footer style="height: 50px; background-color: #e20c0c8c;margin-top: -50px;min-height: 10%;">
+  
+    <p style="text-align: center; color: white; font-size: large;">© 2020 Created and Copyrighted by <a href="https://itarungm.blogspot.com/" class="copyright" style="color: chartreuse;">iTarunGM</a></p>
+    
+</footer>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+
+</html>
